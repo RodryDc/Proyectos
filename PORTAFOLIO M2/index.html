@@ -3,42 +3,507 @@
     <head>
         <meta charset="UTF-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-        <title>Document</title>
+        <link rel="stylesheet" href="./assets/css/style.css" />
+
+        <link
+            href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
+            rel="stylesheet"
+            integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH"
+            crossorigin="anonymous"
+        />
+
+        <title>Portafolio RDC</title>
     </head>
     <body>
+        <!-- FONDO DIFUMINADO -->
         <header>
-            <nav>
-                <p>INICIO</p>
-                <p>ACERCA DE MI</p>
-                <p>PROYECTOS</p>
-                <p>CONTACTO</p>
-                <p>OTRAS FACETAS</p>
+            <nav
+                class="navbar navbar-expand-lg navbar-dark"
+                style="background-color: transparent"
+            >
+                <div class="container-fluid">
+                    <a
+                        class="navbar-brand"
+                        style="color: black !important"
+                        href="#"
+                        >PORTAFOLIO</a
+                    >
+                    <button
+                        class="navbar-toggler"
+                        type="button"
+                        data-bs-toggle="collapse"
+                        data-bs-target="#navbarSupportedContent"
+                        aria-controls="navbarSupportedContent"
+                        aria-expanded="false"
+                        aria-label="Toggle navigation"
+                    >
+                        <span class="navbar-toggler-icon"></span>
+                    </button>
+                    <div
+                        class="collapse navbar-collapse"
+                        id="navbarSupportedContent"
+                    >
+                        <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                            <li class="nav-item">
+                                <a class="nav-link active" href="#sobremi"
+                                    >SOBRE MI</a
+                                >
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link active" href="#skills"
+                                    >HABILIDADES</a
+                                >
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link active" href="#proyectos"
+                                    >PROYECTOS</a
+                                >
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link active" href="#formacion"
+                                    >FORMACION ACADEMICA</a
+                                >
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link active" href="#experiencia"
+                                    >EXPERIENCIA LABORAL</a
+                                >
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link active" href="#otrasfacetas"
+                                    >OTRAS FACETAS</a
+                                >
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link active" href="#contacto"
+                                    >CONTACTO</a
+                                >
+                            </li>
+                            <li class="nav-item">
+                                <a
+                                    class="nav-link active"
+                                    href="./assets/docs/Curriculum.pdf"
+                                    >CURRICULUM</a
+                                >
+                            </li>
+                        </ul>
+
+                        <a
+                            href="https://www.linkedin.com/in/rodrigo-donoso-caceres/"
+                        >
+                            <img
+                                src="./assets/img/linkedin.png"
+                                class="d-flex"
+                                style="width: 30px; height: 30px"
+                                alt="linkedin"
+                            />
+                        </a>
+                        <a href="https://github.com/RodryDc" class="ms-3">
+                            <img
+                                src="./assets/img/github.png"
+                                class="d-flex"
+                                style="width: 30px; height: 30px"
+                                alt="github"
+                            />
+                        </a>
+                    </div>
+                </div>
             </nav>
         </header>
         <!--Sobre mi -->
-        <section></section>
+        <section id="sobremi" class="m-3">
+            <h2>¡Hola, soy Rodrigo Donoso!</h2>
+            <div
+                class="card mb-3"
+                style="max-width: auto; background-color: transparent"
+            >
+                <div class="row g-0">
+                    <div class="col-md-5">
+                        <img
+                            src="./assets/img/Profile.png"
+                            class="img-fluid rounded-start"
+                            alt="Rodrigo Donoso"
+                            style="width: 100%; height: 100%"
+                        />
+                    </div>
+                    <div class="col-md-7" style="text-align: center">
+                        <div class="card-body p-5">
+                            <p class="card-text">
+                                Como Ingeniero en Computación, convierto
+                                problemas aparentemente imposibles en soluciones
+                                lógicas y elegantes.
+                            </p>
+                            <p>
+                                Actualmente, resido en Madrid, España, pero mi
+                                ubicación no es un impedimento para colaborar
+                                con equipos de cualquier parte del mundo. Estoy
+                                completamente abierto al teletrabajo, lo que me
+                                permite contribuir en proyectos globales sin
+                                barreras geográficas.
+                            </p>
+                            <p>
+                                Mi habilidad para trabajar tanto en el frontend
+                                como en el backend me permite abordar proyectos
+                                de manera integral, asegurando que cada detalle,
+                                desde la interfaz de usuario hasta la lógica del
+                                servidor se hagan de la mejor manera posible.
+                            </p>
+                            <p>
+                                Me apasiona resolver problemas complejos y
+                                convertir ideas en soluciones digitales que
+                                realmente marquen la diferencia. Para mí, el
+                                desarrollo es más que un trabajo; es una forma
+                                de crear e innovar. Estoy siempre en busca de
+                                nuevos desafíos y oportunidades para aprender,
+                                mejorar y contribuir a la comunidad tecnológica.
+                            </p>
+
+                            <p class="card-text" id="curri">
+                                <a href="./assets/docs/Curriculum.pdf"
+                                    ><small>Descarga mi curriculum</small></a
+                                >
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!--Habilidades -->
+        <section id="skills">
+            <h2>HABILIDADES</h2>
+            <div class="habilidades">
+                <div class="habilidad" id="habilidad1">
+                    <img src="./assets/img/html.png" alt="HTML" />
+                </div>
+                <div class="habilidad" id="habilidad2">
+                    <img src="./assets/img/css.png" alt="CSS" />
+                </div>
+                <div class="habilidad" id="habilidad3">
+                    <img src="./assets/img/js.png" alt="JS" />
+                </div>
+                <div class="habilidad" id="habilidad4">
+                    <img src="./assets/img/wordpress.png" alt="WORDPRESS" />
+                </div>
+                <div class="habilidad" id="habilidad5">
+                    <img src="./assets/img/java.png" alt="JAVA" />
+                </div>
+                <div class="habilidad" id="habilidad6">
+                    <img src="./assets/img/python.png" alt="PYTHON" />
+                </div>
+                <div class="habilidad" id="habilidad7">
+                    <img src="./assets/img/csh.png" alt="C#" />
+                </div>
+                <div class="habilidad" id="habilidad8">
+                    <img src="./assets/img/unity.jpeg" alt="UNITY" />
+                </div>
+                <div class="habilidad" id="habilidad9">
+                    <img src="./assets/img/vsc.png" alt="VISUALCODE" />
+                </div>
+            </div>
+        </section>
+        <hr />
 
         <!-- Proyectos -->
-        <section></section>
+        <section id="proyectos" class="m-3">
+            <h2>PROYECTOS</h2>
+            <br />
+            <div class="proyectos_card">
+                <div class="card" style="width: 18rem">
+                    <img
+                        src="./assets/img/p2.jpeg"
+                        class="card-img-top"
+                        alt="ZombiePanda"
+                    />
+                    <div class="card-body">
+                        <h5 class="card-title">Videojuego Zombie Panda</h5>
+                        <p class="card-text">
+                            Creado con Unity y C#. Es un juego de plataforma
+                            infinito, donde un Panda debe ir matando animales
+                            zombies y saltando obstaculos. (Actualmente esta
+                            desactivado por desactualización)
+                        </p>
+                        <a href="#" class="btn btn-primary">Play Store</a>
+                    </div>
+                </div>
+                <div class="card" style="width: 18rem">
+                    <img
+                        src="./assets/img/p1.jpeg"
+                        class="card-img-top"
+                        alt="PaginaWeb"
+                    />
+                    <div class="card-body">
+                        <h5 class="card-title">Página Web</h5>
+                        <p class="card-text">
+                            Realizada en Wordpress para una asesora de lactancia
+                            que ofrece cursos y asesorias online, incluye liks a
+                            pagos en linea, reserva en linea y chat
+                        </p>
+                        <a
+                            href="https://tulactanciafeliz.com/"
+                            class="btn btn-primary"
+                            >TuLactanciaFeliz.com</a
+                        >
+                    </div>
+                </div>
+            </div>
+        </section>
+        <hr />
+
+        <!-- Formación -->
+        <section id="formacion" class="m-3">
+            <h2>FORMACIÓN ACADEMICA</h2>
+            <div class="formaciones">
+                <div id="imagen">
+                    <img src="./assets/img/ULS.png" alt="ULS" />
+                    <p id="texto">
+                        Ingeniería en Computación y Licenciatura en ciencias de
+                        la computación
+                    </p>
+                </div>
+                <div id="imagen">
+                    <img src="./assets/img/ECAMP.png" alt="ECAMP" />
+                    <p id="texto">
+                        Bootcamp Desarrollo de Aplicaciones Full Stack Python
+                        Trainee
+                    </p>
+                </div>
+                <div id="imagen">
+                    <img src="./assets/img/EPSUM.png" alt="EPSUM" />
+                    <p id="texto">
+                        Formación Profesional como Desarrollador de Aplicaciones
+                        Multiplataforma
+                    </p>
+                </div>
+            </div>
+            <div class="formaciones2">
+                <div id="imagen">
+                    <img src="./assets/img/ONDAS.png" alt="ONDASFORMACION" />
+                    <p id="texto">Desarrollador de Páginas Web con Wordpress</p>
+                </div>
+                <div id="imagen">
+                    <img src="./assets/img/IACC.png" alt="IACC" />
+                    <p id="texto">Egresado de Contador General</p>
+                </div>
+            </div>
+        </section>
+        <hr />
+        <!-- Experiencia laboral -->
+        <section id="experiencia" class="m-3">
+            <h2>EXPERIENCIA LABORAL</h2>
+            <div class="accordion" id="accordionExample">
+                <div class="accordion-item">
+                    <h2 class="accordion-header">
+                        <button
+                            class="accordion-button"
+                            type="button"
+                            data-bs-toggle="collapse"
+                            data-bs-target="#collapseOne"
+                            aria-expanded="true"
+                            aria-controls="collapseOne"
+                        >
+                            Ingemace Ingeniería Ltda. | Enero 2006 - Hasta la
+                            fecha
+                        </button>
+                    </h2>
+                    <div
+                        id="collapseOne"
+                        class="accordion-collapse collapse show"
+                        data-bs-parent="#accordionExample"
+                    >
+                        <div class="accordion-body">
+                            <strong>Asistente de Operaciones. </strong>
+                            <br />
+                            - Soporte administrativo de las operaciones de la
+                            empresa.
+                            <br />
+                            - Registro de clientes, facturación y manejo de
+                            documentos. <br />
+                            - Control de los resultados de las acciones.<br />
+                            - Soporte informático .
+                        </div>
+                    </div>
+                </div>
+                <div class="accordion-item">
+                    <h2 class="accordion-header">
+                        <button
+                            class="accordion-button collapsed"
+                            type="button"
+                            data-bs-toggle="collapse"
+                            data-bs-target="#collapseTwo"
+                            aria-expanded="false"
+                            aria-controls="collapseTwo"
+                        >
+                            Deportes e Ingeniería Spa | Enero 2014 - Abril 2023
+                        </button>
+                    </h2>
+                    <div
+                        id="collapseTwo"
+                        class="accordion-collapse collapse"
+                        data-bs-parent="#accordionExample"
+                    >
+                        <div class="accordion-body">
+                            <strong>Gerente de Operaciones. </strong><br />
+                            - Negociar contratos para eventos deportivos <br />
+                            - Desarrollador de software <br />
+                            - Desarrollador de Video juegos.
+                        </div>
+                    </div>
+                </div>
+                <div class="accordion-item">
+                    <h2 class="accordion-header">
+                        <button
+                            class="accordion-button collapsed"
+                            type="button"
+                            data-bs-toggle="collapse"
+                            data-bs-target="#collapseThree"
+                            aria-expanded="false"
+                            aria-controls="collapseThree"
+                        >
+                            Fundación Emprepolis | Enero 2017 - Diciembre 2018
+                        </button>
+                    </h2>
+                    <div
+                        id="collapseThree"
+                        class="accordion-collapse collapse"
+                        data-bs-parent="#accordionExample"
+                    >
+                        <div class="accordion-body">
+                            <strong>Profesor de desarrollo aplicaciones </strong
+                            ><br />
+                            - Elaboración de material de capacitación. <br />
+                            - Planificación de seminarios web y talleres en
+                            grupo para niños. <br />
+                            - Evaluación de las aplicaciones desarrolladas en el
+                            taller.
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- Otras Facetas -->
+        <section id="otrasfacetas" class="m-3" style="text-align: center">
+            <h2>OTRAS FACETAS</h2>
+            <p style="text-align: center">
+                Árbitro de Fútbol, creador del Staff: ÁRBITROS CLUB LA SERENA
+            </p>
+            <div
+                id="carouselExampleRide"
+                class="carousel slide"
+                data-bs-ride="true"
+            >
+                <div class="carousel-inner">
+                    <div class="carousel-item active">
+                        <img
+                            src="./assets/img/a1.jpeg"
+                            class="d-block w-100"
+                            alt="foto1"
+                        />
+                    </div>
+                    <div class="carousel-item">
+                        <img
+                            src="./assets/img/a2.jpeg"
+                            class="d-block w-100"
+                            alt="foto2"
+                        />
+                    </div>
+                    <div class="carousel-item">
+                        <img
+                            src="./assets/img/a3.jpeg"
+                            class="d-block w-100"
+                            alt="foto3"
+                        />
+                    </div>
+                    <div class="carousel-item">
+                        <img
+                            src="./assets/img/a4.jpeg"
+                            class="d-block w-100"
+                            alt="foto4"
+                        />
+                    </div>
+                    <div class="carousel-item">
+                        <img
+                            src="./assets/img/a5.jpeg"
+                            class="d-block w-100"
+                            alt="foto5"
+                        />
+                    </div>
+                </div>
+                <button
+                    class="carousel-control-prev"
+                    type="button"
+                    data-bs-target="#carouselExampleRide"
+                    data-bs-slide="prev"
+                >
+                    <span
+                        class="carousel-control-prev-icon"
+                        aria-hidden="true"
+                    ></span>
+                    <span class="visually-hidden">Previous</span>
+                </button>
+                <button
+                    class="carousel-control-next"
+                    type="button"
+                    data-bs-target="#carouselExampleRide"
+                    data-bs-slide="next"
+                >
+                    <span
+                        class="carousel-control-next-icon"
+                        aria-hidden="true"
+                    ></span>
+                    <span class="visually-hidden">Next</span>
+                </button>
+            </div>
+        </section>
+        <hr />
 
         <!-- Contacto -->
-        <section>
-            <img src="./assets/img/email.png" alt="icono email" />
+        <section id="contacto" class="m-3" style="text-align: center">
             <h2>EMAIL</h2>
-            <img src="./assets/img/email.png" alt="icono email" />
             <div>
                 <input type="email" placeholder="rdc.1985@gmail.com" disabled />
-                <button id="contactar">CONTACTAR</button>
-                <button id="copiar" title="Copiar Email">Copiar</button>
+                <button
+                    id="contactar"
+                    title="Contactame"
+                    style="
+                        background-image: url(./assets/img/email.png);
+                        background-size: contain;
+                        background-repeat: no-repeat;
+                        width: 30px;
+                        height: 30px;
+                    "
+                ></button>
+                <button
+                    id="copiar"
+                    title="Copiar Email"
+                    style="
+                        background-image: url(./assets/img/copiar.png);
+                        background-size: contain;
+                        background-repeat: no-repeat;
+                        width: 30px;
+                        height: 30px;
+                    "
+                ></button>
             </div>
-            <form action="">
+            <br />
+            <!-- Formulario -->
+            <form action="#" id="formulario" style="display: none">
                 <label for="nombre">Nombre</label>
+                <br />
                 <input type="text" name="nombre" id="nombre" />
                 <br />
                 <label for="email">Email</label>
-                <input type="email" name="email" id="email" />
                 <br />
-                <label for="mensaje">Mensaje tu mensaje</label>
+                <input
+                    type="email"
+                    name="email"
+                    id="email"
+                    pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$"
+                    placeholder="tucorreo@email.com"
+                />
+                <br />
+                <label for="mensaje">Escribe tu mensaje</label>
+                <br />
                 <textarea
                     name="mensaje"
                     id="mensaje"
@@ -49,5 +514,20 @@
                 <input type="submit" value="Enviar" />
             </form>
         </section>
+
+        <!-- Boton flotante -->
+        <div id="boton-flotante" onclick="irAlTop()">
+            <img src="./assets/img/flecha.webp" alt="Icono" />
+        </div>
+        <script
+            src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+            integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+            crossorigin="anonymous"
+        ></script>
+        <script src="./assets/js/script.js"></script>
+        <hr />
     </body>
+    <footer>
+        <p>Copyright © 2024 Rodrigo Donoso</p>
+    </footer>
 </html>
