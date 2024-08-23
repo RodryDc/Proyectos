@@ -1,34 +1,12 @@
 body {
-    background-image: linear-gradient(
+    background: rgb(2, 0, 36);
+    background: linear-gradient(
         180deg,
-        #7fc08a 0,
-        #74c292 3.85%,
-        #68c39b 7.69%,
-        #5bc4a4 11.54%,
-        #4fc4ae 15.38%,
-        #41c4b7 19.23%,
-        #34c4c1 23.08%,
-        #28c4ca 26.92%,
-        #1fc3d3 30.77%,
-        #1ec3db 34.62%,
-        #26c1e2 38.46%,
-        #33c0e8 42.31%,
-        #43beee 46.15%,
-        #53bcf2 50%,
-        #63baf5 53.85%,
-        #73b7f7 57.69%,
-        #83b4f7 61.54%,
-        #92b1f6 65.38%,
-        #a1aef4 69.23%,
-        #aeaaf1 73.08%,
-        #bba7ec 76.92%,
-        #c7a4e6 80.77%,
-        #d1a0e0 84.62%,
-        #db9dd8 88.46%,
-        #e39bd0 92.31%,
-        #e999c7 96.15%,
-        #ee97be 100%
+        rgba(2, 0, 36, 1) 0%,
+        rgba(9, 9, 121, 1) 35%,
+        rgba(0, 212, 255, 1) 100%
     );
+    color: white !important;
 }
 
 h2,
@@ -36,8 +14,9 @@ footer {
     text-align: center;
 }
 
-a {
-    color: black !important;
+a,
+p {
+    color: white !important;
 }
 
 #curri a:hover {
@@ -65,7 +44,7 @@ a {
 .habilidad img {
     max-width: 80%;
     max-height: 80%;
-    opacity: 0.5;
+    opacity: 0.8;
 }
 
 #boton-flotante {
@@ -101,6 +80,24 @@ a {
     text-align: center;
 }
 
+.proyectos_card img {
+    max-width: 100%;
+    max-height: 100%;
+}
+
+.proyectos_card a {
+    text-decoration: none;
+}
+
+.proyectos_card a:hover {
+    text-decoration: underline;
+}
+
+.proyectos_card p {
+    text-align: center;
+    color: black !important;
+}
+
 .formaciones {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
@@ -110,7 +107,8 @@ a {
     text-align: center;
 }
 
-.formaciones img {
+.formaciones img,
+.formaciones2 img {
     max-width: 50%;
     max-height: 50%;
 }
@@ -124,7 +122,16 @@ a {
     text-align: center;
 }
 
-.formaciones2 img {
-    max-width: 40%;
-    max-height: 40%;
+#contactar:hover,
+#copiar:hover {
+    animation: vibrar 1s ease-in-out infinite alternate;
+}
+
+@keyframes vibrar {
+    0% {
+        transform: translateY(5px);
+    }
+    100% {
+        transform: translateY(-5px);
+    }
 }
