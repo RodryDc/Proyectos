@@ -1,11 +1,17 @@
 (""")Requerimos eliminar todas las vocales de la palabra “paralelepípedo”, e imprimir en pantalla las
 consonantes restantes y su posición dentro de dicha palabra.(""")
+ 
 
-palabra = "paralelepipedo"
+palabra = "paralelepípedo"
+vocales = "aeiouáéíóú"
 
-for i in palabra:
-    if i == "a" or i == "e" or i == "i" or i == "o" or i == "u":
-        palabra = palabra.replace(i, "")
+print("Palabra:", palabra)
 
-print(palabra)
+for i in range(len(palabra)):
+    letra = palabra[i]
+    if letra.lower() not in vocales:
+        print("Consonante:", letra, "Posición:", i)
+
+    
+
 
