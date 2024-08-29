@@ -5,14 +5,14 @@ subcondiciones; en su lugar, usar condiciones anidadas.(""")
 numero = int(input("Ingresa un numero: ")) #Asignamos el valor a la variable numero
 
 if (numero > 0): #Verificamos si el numero es positivo o negativo
-    print("El numero es positivo")
+    print(f"El numero {numero} es positivo")
 elif (numero < 0):
-    print("El numero es negativo")
+    print(f"El numero {numero} es negativo")
 else:
-    print("El numero es 0")
+    print(f"El numero {numero} es 0")
 
 if (numero % 2 == 0): #Verificamos si el numero es par o impar
-    print("El numero es par")
+    print(f"El numero {numero} es par")
 else:
-    print("El numero es impar")
+    print(f"El numero {numero} es impar")
 
