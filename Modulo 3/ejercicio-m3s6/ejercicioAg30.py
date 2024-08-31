@@ -33,6 +33,9 @@ def almacen():
 
     #Peso del producto
     peso = int(input("\nIngrese el peso del producto en (kg): "))
+    while (peso < 0):
+        print("\nEl peso no puede ser negativo")
+        peso = int(input("\nIngrese el peso del producto en (kg): "))
     #Categorización del peso
     if peso >= 20:
         categoria = "Pesado"
