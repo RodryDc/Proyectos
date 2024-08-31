@@ -76,3 +76,9 @@ while len(mi_otra_lista) <10:
     mi_otra_lista.append("texto")
 
 print(mi_otra_lista)
+
+nombre = input("ingresa tu nombre: ")
+email = input("ingresa tu email: ")
+
+print(f"tu nombre es: {nombre} y tu email es: {email}")
+
