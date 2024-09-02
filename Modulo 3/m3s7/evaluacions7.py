@@ -15,20 +15,31 @@ cuya edad sea un número primo.(""")
 
 
 estudiantes = [
- {'nombre': 'Juan', 'edad': 17, 'calificaciones': [85, 90, 88]},
- {'nombre': 'María', 'edad': 19, 'calificaciones': [92, 89, 90]},
- {'nombre': 'Pedro', 'edad': 21, 'calificaciones': [85, 95, 80]},
- {'nombre': 'Ana', 'edad': 18, 'calificaciones': [90, 92, 87]},
- {'nombre': 'Luis', 'edad': 20, 'calificaciones': [88, 85, 92]},
+    {'nombre': 'Juan', 'edad': 17, 'calificaciones': [85, 90, 88]},
+    {'nombre': 'María', 'edad': 19, 'calificaciones': [92, 89, 90]},
+    {'nombre': 'Pedro', 'edad': 21, 'calificaciones': [85, 95, 80]},
+    {'nombre': 'Ana', 'edad': 18, 'calificaciones': [90, 92, 87]},
+    {'nombre': 'Luis', 'edad': 20, 'calificaciones': [88, 85, 92]},
 ]
 
 for estudiante in estudiantes:
     if estudiante['edad'] > 18:
-        if sum(estudiante['calificaciones']) / len(estudiante['calificaciones']) > 85:
-            print(estudiante)
+        promedio = sum(estudiante['calificaciones']) / len(estudiante['calificaciones'])
+        if promedio > 85:
+            print(estudiante, "con promedio:", promedio)
+  
+def es_primo(n):
+    for i in range(2, n):
+        if n % i == 0:
+            return False
+    return True
 
+promedio = 0
+contador = 0
 for estudiante in estudiantes:
-    if estudiante['edad'] > 18 and estudiante['edad'] % 7 == 0:
-        print(sum(estudiante['calificaciones']) / len(estudiante['calificaciones']))
-
-    
+    if estudiante['edad'] > 18 and es_primo(estudiante['edad']):
+        print(estudiante)
+        promedio += sum(estudiante['calificaciones']) / len(estudiante['calificaciones'])
+        contador += 1
+        
+print("El promedio de las calificaciones de los estudiantes mayores de 18 y primos es:", promedio/contador)
