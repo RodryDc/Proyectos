@@ -8,3 +8,4 @@ factorial = 1
 for i in range(1, numero + 1): #Calculamos el factorial
     factorial = factorial * i
 print(factorial)
+
