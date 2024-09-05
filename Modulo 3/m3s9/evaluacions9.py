@@ -38,6 +38,6 @@ def resultados_en_diccionario(num1, num2):
     }
     return diccionario
 
-num1 = int(input("Ingresa el primer numero: ")) #Asignamos el valor a la variable num1
-num2 = int(input("Ingresa el segundo numero: ")) #Asignamos el valor a la variable num2
+num1 = int(input("Ingresa el primer numero: ")) 
+num2 = int(input("Ingresa el segundo numero: ")) 
 print (resultados_en_diccionario(num1,num2))
