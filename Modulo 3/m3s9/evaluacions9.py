@@ -6,19 +6,38 @@ Los resultados se deben almacenar en un diccionario, cuyas claves serán: Suma, 
 Multiplicación y División, y los valores de cada clave serán los resultados obtenidos con la función
 creada anteriormente(""")
 
-def suma(num1, num2):    
+def sumar(num1, num2):    
     return num1 + num2
 
-def resta(num1, num2):
+def restar(num1, num2):
     return num1 - num2
 
-def multiplicacion(num1, num2):
+def multiplicar(num1, num2):
     return num1 * num2
 
-def division(num1, num2):
-    return num1 / num2
+def dividir(num1, num2):
+    if num2 != 0:
+        return num1 / num2
+    else:
+        return "No se puede dividir por cero"
+    
+def operaciones(num1, num2):
+    suma = sumar(num1, num2)
+    resta = restar(num1, num2)
+    multiplicacion = multiplicar(num1, num2)
+    division = dividir(num1, num2)
+    return (suma, resta, multiplicacion, division)
 
+def resultados_en_diccionario(num1, num2):
+    resultados = operaciones(num1, num2)
+    diccionario = {
+    "Suma" : resultados[0],
+    "Resta": resultados[1],
+    "Multiplicacion": resultados[2],
+    "Division": resultados[3]
+    }
+    return diccionario
 
 num1 = int(input("Ingresa el primer numero: ")) #Asignamos el valor a la variable num1
 num2 = int(input("Ingresa el segundo numero: ")) #Asignamos el valor a la variable num2
-
+print (resultados_en_diccionario(num1,num2))
