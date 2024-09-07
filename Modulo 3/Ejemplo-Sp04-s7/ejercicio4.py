@@ -22,7 +22,7 @@ print("Bienvenido al inventario de productos: ")
 print("---------------------------------------")
 
 while True:
-    nombre = input("\nIngresa el nombre del producto o 'salir' para terminar: ")
+    nombre = input("\nIngresa el nombre del producto o 'salir' para terminar: ").lower
     if nombre == "salir":
         break
     else:
@@ -31,7 +31,7 @@ while True:
         print(inventario)
 
 while True:
-    buscar = input("\nIngresa el nombre del producto que deseas buscar o 'salir' para terminar: ")
+    buscar = input("\nIngresa el nombre del producto que deseas buscar o 'salir' para terminar: ").lower
     if buscar == "salir":
         break
     else:

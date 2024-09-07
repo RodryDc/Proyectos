@@ -28,7 +28,7 @@ Validación de Entradas: Asegúrate de que los datos ingresados sean válidos (p
 ejemplo, cantidades positivas, precios correctos, etc.)."""
 
 #from funciones_menu import agregar_producto,buscar_producto
-
+from os import system
 def agregar_producto():
     print("AGREGANDO PRODUCTO")
     nombre = input("Ingresa el nombre del producto: ")
@@ -73,6 +73,39 @@ def buscar_producto():
 
         return 
 
+def actualizar_producto():
+    print("ACTUALIZAR PRODUCTO")
+    actualizar = input("Ingrese el nombre del producto que desea actualizar: ")
+    if actualizar in inventario:
+        nueva_categoria = input(f"Ingrese la nueva categoria de {actualizar}: ")
+        nueva_cantidad = int(input(f"Ingrese la nueva cantidad de {actualizar}: "))        
+        while nueva_cantidad < 0:
+            print("La cantidad no puede ser negativa")
+            nueva_cantidad = int(input(f"Ingrese la nueva cantidad de {actualizar}: "))
+        nuevo_precio = int(input(f"Ingrese el nuevo precio de {actualizar}: "))
+        while nuevo_precio < 0:
+            print("El precio no puede ser negativo")
+            nuevo_precio = int(input(f"Ingrese el nuevo precio de {actualizar}: "))  
+        inventario[actualizar] = (nueva_categoria, nueva_cantidad, nuevo_precio)
+        print("Información actualizada")
+    else:
+        print("El producto no existe")
+
+def borrar_producto():
+    print("BORRAR PRODUCTO")
+    print(list(inventario.keys()))
+    borrar = input("Ingrese el nombre del producto que desea borrar: ")
+    if borrar in inventario:
+        del inventario[borrar]
+        print("Información eliminada")
+    else:
+        print("El producto no existe")
+
+def mostrar_inventario():
+    print("INVENTARIO")
+    for clave , valor in inventario.items():
+        print(f"EL PRODUCTO: {clave} ES DE CATEGORIA: {valor[0]}, SU STOCK ES: {valor[1]} Y SU VALOR ES: {valor[2]}")
+
 inventario = {
     "arroz": ("abarrote", 5, 1690),
     "pipeño": ("alcohol", 100, 4990),
@@ -102,12 +135,16 @@ while opcion != 6:
     elif (opcion == 2):
         buscar_producto()
     elif (opcion == 3):
-        print("ACTUALIZAR INVENTARIO")
+        actualizar_producto()
     elif (opcion == 4):
-        print("ELIMINAR PRODUCTOS")
+        borrar_producto()
     elif (opcion == 5):
-        print("MOSTRAR INVENTARIO")
+        mostrar_inventario()
     elif (opcion == 6):
         print("SALIR")
+        break
     else:
         print("Opcion no valida")
+
+    input("\nPresione una tecla para continuar...")
+    system("clear") #limpia la consola
