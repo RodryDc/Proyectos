@@ -16,7 +16,8 @@ for i in range(cantidad):
     
     estudiantes[nombre] = calificacion
 
-print(estudiantes)
+for nombre, calificacion in estudiantes.items():
+    print(f"El estudiante {nombre} tiene una calificación de {calificacion}")
 
 print("\n Otra forma")
 
@@ -27,4 +28,5 @@ while True:
     calificacion = float(input("Ingresa la calificación del estudiante: "))
     estudiantes[nombre] = calificacion
 
-print(estudiantes)
+for nombre, calificacion in estudiantes.items():
+    print(f"El estudiante {nombre} tiene una calificación de {calificacion}")
