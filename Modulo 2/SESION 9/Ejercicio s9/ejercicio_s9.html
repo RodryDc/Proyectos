@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <link rel="stylesheet" href="./assets/css/style_s9.css" />
+        <title>MANIPULANDO EL DOM RDC</title>
+    </head>
+    <body>
+        <div class="caja1 container">
+            <div
+                id="text1"
+                style="background-color: blueviolet"
+                onmouseover="mostrarmensaje()"
+                onmouseout="ocultarmensaje()"
+            >
+                <p>
+                    Lorem ipsum, dolor sit amet consectetur adipisicing elit.
+                    Eveniet, accusantium distinctio accusamus totam rem at ex
+                    alias labore veniam aliquam nisi recusandae esse voluptatum
+                    culpa veritatis enim porro dolor quis?
+                </p>
+            </div>
+
+            <div id="text2" style="background-color: orange">
+                <p>
+                    Lorem ipsum, dolor sit amet consectetur adipisicing elit.
+                    Eveniet, accusantium distinctio accusamus totam rem at ex
+                    alias labore veniam aliquam nisi recusandae esse voluptatum
+                    culpa veritatis enim porro dolor quis?
+                </p>
+            </div>
+        </div>
+
+        <div
+            id="caja2"
+            onclick="aumentarimagen()"
+            onmouseout="disminuirimagen()"
+        >
+            <img
+                src="./assets/img/Pac-Man_Cutscene.svg.png"
+                id="img"
+                width="20%"
+                alt=""
+            />
+        </div>
+
+        <div id="caja3" ondblclick="aumentartexto()">
+            <p>
+                Lorem ipsum dolor sit, amet consectetur adipisicing elit.
+                Sapiente laudantium aliquid rem consequatur eius nemo alias
+                provident sunt et voluptate in aut, quas hic quia dolores,
+                corrupti voluptatem reiciendis facere.
+            </p>
+        </div>
+        <script src="./assets/js/script_s9.js"></script>
+    </body>
+</html>

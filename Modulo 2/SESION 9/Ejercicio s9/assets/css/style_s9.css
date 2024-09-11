@@ -1,0 +1,16 @@
+/*#text1,
+#caja2 img {
+    display: none;
+}
+
+#caja2 img .large {
+    transform: scale(2);
+}
+
+#caja3 .large-text {
+    font-size: 2em;
+}
+*/
+.caja1 #text1 {
+    background-color: blueviolet;
+}

@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FORMULARIOS</title>
+</head>
+<body>
+    <form action="" method="">
+        <label for="nombre">Nombre</label> <!-- Etiqueta -->
+        <input type="text" name="nombre"> <!-- Campo de texto -->
+        <!-- Otros Inputs: number, date, time, email, password, button, submit, reset, color, range, search, tel, url, radio, checkbox, file -->
+        <br>
+        <label for="apellidos">Apellidos</label> <!-- Apellidos -->
+        <input type="text" name="apellidos">
+        <br>
+        <label for="telefono">Telefono</label>
+        <input type="tel" name="telefono" pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}" placeholder="123-456-7890"> <!-- Telefono --> 
+        <br>
+        <label for="email">Email</label>
+        <input type="email" name="email" pattern="[\w-\.]+@([\w-]+\.)+[\w-]{2,4}" placeholder="ejemplo@correo.com"> <!-- Email -->
+        <br>
+        <label for="rut">Rut</label>
+        <input type="text" name="rut" pattern="^[0-9]+-[0-9kK]{1}$" placeholder="12345678-9"> <!-- Rut-->
+        <br>
+        <label for="contrasena">Contraseña</label>
+        <input type="password" name="contrasena" > <!-- Contraseña -->
+        <br>
+        <label for="provincia">Provincia Select</label>
+        <select name="provincia" id="provincia"> <!-- Select -->
+            <option value="0">Provincia</option> <!-- Opción -->
+            <option value="1">Madrid</option>
+            <option value="2">Barcelona</option>
+            <option value="3">Valencia</option>
+        </select>
+        <br>
+        <label for="fruta">Fruta datalist</label>
+        <input list="fruta" name="fruta"> <!-- Datalist -->
+        <datalist id="fruta">
+            <option value="Manzana"></option>
+            <option value="Pera"></option>
+            <option value="Naranja"></option>
+        </datalist>
+        <br>
+        <input type="checkbox" name="acepto" value="1"> <!-- Checkbox -->
+        <label for="acepto">Acepto</label>
+        <br>
+        <input type="radio" name="sexo" value="1"> <!-- Radio -->
+        <label for="sexo">Hombre</label>
+        <br>
+        <input type="radio" name="sexo" value="2">
+        <label for="sexo">Mujer</label>
+        <br>
+        <label for="comentario">Comentarios</label>
+        <br>
+        <textarea name="comentario" id="comentario" cols="30" rows="10"></textarea> <!-- Textarea -->  
+        
+        <input type="file" name="fichero" id="fichero"> <!-- Fichero -->
+        <br>
+        <label for="color">Color</label> <!-- Color -->
+        <input type="color" name="color" id="color">
+        <br>
+        <label for="range">Range</label> <!-- Range -->
+        <input type="range" name="range" id="range" min="0" max="100">
+        <br>
+        <label for="url">URL</label> <!-- URL -->
+        <input type="url" name="url" id="url">
+        <br>
+        <label for="search">Search</label> <!-- Search -->
+        <input type="search" name="search" id="search">
+        <br>
+        <label for="numero">Número</label>
+        <input type="number" name="numero" id="numero"> <!-- Número -->
+        <br>
+        <label for="fecha">Fecha</label>
+        <input type="date" name="fecha" id="fecha"> <!-- Fecha -->
+        <br>
+        <label for="hora">Hora</label>
+        <input type="time" name="hora" id="hora"> <!-- Hora -->
+        <br>
+        <button type="reset">Limpiar</button> <!-- Botón Limpiar-->
+        <br>        
+        <input type="submit" value="Enviar"> <!-- Botón de enviar -->
+
+
+    </form>
+</body>
+</html>
