@@ -38,3 +38,13 @@ print(frutas.values()) #imprime una lista con los valores
 print("\nUpdate")
 frutas.update({"uva": 50, "mango": 300})
 print(frutas)
+
+#pop() elimina un elemento dado su clave
+print("\nPop")
+frutas.pop("uva")
+print(frutas)
+
+#clear() elimina todos los elementos
+print("\nClear")
+frutas.clear()
+print(frutas)
