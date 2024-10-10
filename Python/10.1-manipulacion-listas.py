@@ -71,3 +71,58 @@ print(mascotas)
 
 mascotas.clear() #ELIMINAR TODOS LOS ELEMENTOS
 print(mascotas)
+
+#ORDENAR LISTAS
+mascotas = ["Wolfgang","Pelusa","Pulga", "Felipe","Pulga", "Chanchito feliz"] #CREAR LISTA
+mascotas.sort() #ORDENAR DE MENOR A MAYOR
+print(mascotas)
+
+mascotas.sort(reverse=True) #ORDENAR DE MAYOR A MENOR
+print(mascotas)
+
+mascotas2= sorted(mascotas) #DEVUELVE UNA COPIA DE LA LISTA ORDENADA
+print(mascotas2)
+
+
+usuarios=[[4, "Juan"], [3, "Pedro"], [2, "Maria"], [1, "Luis"]] #CREAR LISTA
+
+usuarios.sort() #ORDENAR DE MENOR A MAYOR
+print(usuarios)
+
+#EL PRIMER ELEMENTO DEBE SER ORDENABLE
+
+usuarios2 = [["Luis", 1], ["Maria", 2], ["Pedro", 3], ["Juan", 4]] #CREAR LISTA
+
+def ordena(elemento):
+    return elemento[1]
+
+
+usuarios2.sort(key=ordena, reverse=True) #ORDENAR DE MENOR A MAYOR
+print(usuarios2)
+
+usuarios2.sort(key=lambda elemento:elemento[1]) #LAMBDA SON FUINCIONES ANONIMAS QUE REEMPLAZA A UNA FUNCION
+print(usuarios2)
+
+#COMPRENSION DE LISTAS
+suarios2 = [["Luis", 1], ["Maria", 2], ["Pedro", 3], ["Juan", 4]]
+
+nombres =[]
+for usuario in usuarios2:
+    nombres.append(usuario[0])
+
+print(nombres)
+
+nombres = [usuario[0] for usuario in usuarios2] #COMPRENSION (MAP)
+print(nombres)
+nombres = [usuario for usuario in usuarios2 if usuario[1] > 2] #FILTRAR (FILTER)
+print(nombres)
+nombres = [usuario[0] for usuario in usuarios2 if usuario[1] > 2] #FILTRAR Y TRANSFORMAR
+
+print(nombres)
+
+nombres = list(map(lambda usuario: usuario[0], usuarios2)) #LAMBDA SON FUINCIONES ANONIMAS QUE REEMPLAZA A UNA FUNCION
+
+print(nombres)
+
+nombres =list(filter(lambda usuario: usuario[1] > 2, usuarios2)) #FILTRAR
+print(nombres)
