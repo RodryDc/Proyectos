@@ -1,14 +1,6 @@
 class Circulo:
 
-    __PI =3.14159
-    # def __init__(self,radio):
-    #     self.radio = radio
-
-    # def mostrarRadio(self):
-    #     print(f"Radio: {self.radio}")
-
-    # def modificarRadio(self,valor):
-    #     self.radio = valor
+    __PI =3.14159    
 
     def __init__(self,color):
         self.color = color
