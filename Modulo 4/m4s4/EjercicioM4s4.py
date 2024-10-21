@@ -32,7 +32,7 @@ class Libro:
         self.year_of_publishment = ann_de_publicacion
 
     def __str__(self):
-        return f"1\n2\n{self.__dict__}" #imprime el diccionario
+        return f"1\n2\n{self.__dict__}" 
 
 libro_1 = Libro("Dan Brown", "Infierno", 2003)
 libro_2 = Libro("Dan Brown", "The Da Vinci Code", 2003)
