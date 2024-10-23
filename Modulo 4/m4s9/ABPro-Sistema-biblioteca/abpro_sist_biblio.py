@@ -29,53 +29,60 @@ class Usuario:
     
 @dataclass
 class Lector(Usuario):
-    prestamos: list
+    prestamos: list = None
+
+    def __post_init__(self):
+        if not self.prestamos:
+            self.prestamos = []
     @property
     def librosPrestados(self):
         return len(self.prestamos)
     
     def tomarLibro(self,libro):
-        self.__prestamos.append(libro)
-        print(f"El lector {self.__nombre} ha tomado el libro {libro}")
+        self.prestamos.append(libro)
+        print(f"El lector {self.getNombre()} ha tomado el libro {libro}")
     
     def devolverLibro(self,libro):
         try:
-            self.__prestamos.remove(libro)
-            print(f"El lector {self.__nombre} ha devuelto el libro {libro}")
+            self.prestamos.remove(libro)
+            print(f"El lector {self.getNombre()} ha devuelto el libro {libro}")
         except ValueError:
             print("El libro no se encuentra prestado")
     
     def __str__(self):
-        return f"El lector {self.__nombre} tiene {self.librosPrestados} libros prestados"
+        return f"El lector {self.getNombre()} tiene {self.librosPrestados} libros prestados"
     
     def __repr__(self):
-        return f"Lector({self.__nombre},{self.__id},{self.prestamos})"   
+        return f"Lector({self.getNombre()},{self.__id},{self.prestamos})"   
     
 @dataclass
 class Administrador(Usuario):
-    catalogo_libros: list
-    @staticmethod
-    def agregarLibro(libro):
-        Administrador.catalogo_libros.append(libro)
-        print(f"El libro {libro} ha sido agregado al catalogo")
+    catalogo_libros: list = None  # Default value is None
+    
+    def __post_init__(self):
+        # Asegurarse de que catalogo_libros se inicializa como una lista vacía
+        if self.catalogo_libros is None:
+            self.catalogo_libros = []
 
-    @staticmethod
-    def eliminarLIbro(libro):
-        if libro in Administrador.catalogo_libros:
-           Administrador.catalogo_libros.remove(libro)
-           print(f"El libro {libro} ha sido eliminado del catalogo")
+    def agregarLibro(self, libro):
+        self.catalogo_libros.append(libro)
+        print(f"El libro {libro} ha sido agregado al catálogo")
+
+    def eliminarLibro(self, libro):
+        if libro in self.catalogo_libros:
+            self.catalogo_libros.remove(libro)
+            print(f"El libro {libro} ha sido eliminado del catálogo")
         else:
-            print(f"El libro {libro} no se encuentra en el catalogo")
-            
+            print(f"El libro {libro} no se encuentra en el catálogo")
+
+    def __str__(self):
+        return f"El administrador {self.getNombre()} tiene {len(self.catalogo_libros)} libros en el catálogo"
+    
+    def __repr__(self):
+        return f"Administrador({self.getNombre()}, {self.getId()}, {self.catalogo_libros})"
     @classmethod
     def contarLIbros(cls):
         return len(cls)
-
-    def __str__(self):
-        return f"El administrador {self.__nombre} tiene {len(self.catalogo_libros)} libros en el catalogo"
-    
-    def __repr__(self):
-        return f"Administrador({self.__nombre},{self.__id},{self.catalogo_libros})"
 @dataclass
 class LectorAministrador(Lector,Administrador):
     def __str__(self):
@@ -90,16 +97,17 @@ class Libro:
         self.titulo = titulo
         self.autor = autor
         self.cod_unico = cod_unico  
-        self.estado = "disponible" 
+        self.estado = estado
         Libro.contador_libros += 1
 
+    @property
     def estado(self):
-        return self.estado
+        return self._estado
     
-    @estado.seter
-    def estado(self,nuevo_estado):
-        if nuevo_estado in ["disponible","prestado"]:
-            self.estado = nuevo_estado
+    @estado.setter
+    def estado(self, nuevo_estado):
+        if nuevo_estado in ["disponible", "prestado"]:
+            self._estado = nuevo_estado  # Asignar al atributo privado
         else:
             raise ValueError("El estado debe ser 'disponible' o 'prestado'")
         
@@ -162,9 +170,9 @@ class Prestamo:
         return f"Prestamo: {self.libro}, Lector: {self.lector}, fecha de prestamo: {self.fecha_prestamo}, Fecha de devolucion: {self.fechaDevolucion}"
     
     def __repr__(self):
-        return f"Prestamo: {self.libro}, Lector: {self.lector}, fecha de prestamo: {self.fecha_prestamo}, Fecha de devolucion: {self.fechaDevolucion}"
+        return self.__str__()
     
-    def guardar_inventario(self,archivo):
+    def guardar_archivo(self,archivo):
         print(f"Guardando en: {archivo}")
         try:
             with open(archivo, "a") as inventario:
@@ -172,7 +180,7 @@ class Prestamo:
         except Exception as e:
             raise (f"Error al guardar el archivo: {e}")
 
-    def cargar_inventario(self, archivo):
+    def cargar_archivo(self, archivo):
         print(f"Cargando desde: {archivo}")
         try:
             with open(archivo, "r") as inventario:
