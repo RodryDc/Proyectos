@@ -1,5 +1,4 @@
 from Vehiculo import *
-from archivos import *
 
 while True:
     print("\n--------------------------------------------")
